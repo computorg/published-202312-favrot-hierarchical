@@ -16,8 +16,6 @@ author:
       - name: MIA Paris-Saclay, INRAE AgroParisTech Université Paris-Saclay, France
         url: https://mia-ps.inrae.fr/
 date: last-modified
-description: |
-
 abstract: >+
   In plant epidemiology, pest abundance is measured in field trials using metrics assessing either pest prevalence (fraction of the plant population infected) or pest intensity (average number of pest individuals present in infected plants). Some of these trials rely on prevalence, while others rely on intensity, depending on the protocols.
   
@@ -36,9 +34,10 @@ citation:
   type: article-journal
   container-title: "Computo"
   doi: "10.57750/6cgk-g727"
-  url: "https://computo.sfds.asso.fr/published-202312-favrot-hierarchical"
-  publisher: "Société Française de Statistique"
+  publisher: "French Statistical Society"
   issn: "2824-7795"
+  url: "https://computo.sfds.asso.fr/published-202312-favrot-hierarchical/"
+  pdf-url: "https://computo.sfds.asso.fr/published-202312-favrot-hierarchical/published-202312-favrot-hierarchical.pdf"
 google-scholar: true
 bibliography: references.bib
 github-user: computorg
@@ -815,7 +814,7 @@ Results obtained from simulated data confirm that, when pest prevalence and pest
   
 Although our framework is illustrated to compare the efficacy of plant pest treatments, it could be applied to other areas of research in the future, in particular for optimizing designs used in animal and human epidemiology. It is imperative to note that the ultimate selection of a design should be contingent upon the consideration of local constraints. As the model codes are made fully available, we believe that these codes could be used by different institutes to compare many different designs in the future, not only the types of designs considered in our paper. Of particular significance is the capability of our model to optimize sample sizes, with its impact contingent on the relative importance of within-trial variability compared to between-trial variability.    
 
-# Supplementary material { .unnumbered }
+# Supplementary material { .appendix }
 
 {{< include published-202312-favrot-hierarchical-supp.qmd >}}
 

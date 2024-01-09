@@ -1,7 +1,3 @@
----
-title: "Supplementary material"
-format: pdf
----
 
 ```{r, message = FALSE, echo = FALSE}
 library(ggplot2)
