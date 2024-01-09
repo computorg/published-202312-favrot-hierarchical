@@ -8,7 +8,7 @@
 
 <meta name="author" content="Armand Favrot">
 <meta name="author" content="David Makowski">
-<meta name="dcterms.date" content="2024-01-08">
+<meta name="dcterms.date" content="2024-01-09">
 <meta name="keywords" content="bayesian model, epidemiology, hierarchical model, pest control, trial, survey">
 
 <title>published-202312-favrot-hierarchical - A hierarchical model to evaluate pest treatments from prevalence and intensity data</title>
@@ -199,10 +199,10 @@ Because of its flexibility, our model can be used to evaluate and rank the effic
 <meta name="citation_keywords" content="bayesian model,epidemiology,hierarchical model,pest control,trial,survey">
 <meta name="citation_author" content="Armand Favrot">
 <meta name="citation_author" content="David Makowski">
-<meta name="citation_publication_date" content="2024-01-08">
-<meta name="citation_cover_date" content="2024-01-08">
+<meta name="citation_publication_date" content="2024-01-09">
+<meta name="citation_cover_date" content="2024-01-09">
 <meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-01-08">
+<meta name="citation_online_date" content="2024-01-09">
 <meta name="citation_fulltext_html_url" content="https://computo.sfds.asso.fr/published-202312-favrot-hierarchical">
 <meta name="citation_doi" content="10.57750/6cgk-g727">
 <meta name="citation_issn" content="2824-7795">
@@ -235,7 +235,7 @@ Because of its flexibility, our model can be used to evaluate and rank the effic
     <div class="quarto-title column-body">
       <div class="quarto-title-block"><div><h1 class="title"><a href="https://computo.sfds.asso.fr">
         <img src="https://computo.sfds.asso.fr/assets/img/logo_notext_white.png" height="60px">
-      </a> &nbsp; A hierarchical model to evaluate pest treatments from prevalence and intensity data</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> source</button></div></div>
+      </a> &nbsp; Supplementary material</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> source</button></div></div>
             <p><a href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/80x15.png" alt="Creative Commons BY License"></a>
 ISSN 2824-7795</p>
                 </div>
@@ -274,7 +274,7 @@ ISSN 2824-7795</p>
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 8, 2024</p>
+        <p class="date">January 9, 2024</p>
       </div>
     </div>
                                     
@@ -339,12 +339,15 @@ ISSN 2824-7795</p>
   </ul></li>
   </ul></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">4</span> Conclusion</a></li>
-  <li><a href="#author-contributions" id="toc-author-contributions" class="nav-link" data-scroll-target="#author-contributions">Author contributions</a></li>
-  <li><a href="#funding" id="toc-funding" class="nav-link" data-scroll-target="#funding">Funding</a></li>
-  <li><a href="#data-availability" id="toc-data-availability" class="nav-link" data-scroll-target="#data-availability">Data availability</a></li>
-  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
+  <li><a href="#supplementary-material" id="toc-supplementary-material" class="nav-link" data-scroll-target="#supplementary-material">Supplementary material</a>
+  <ul class="collapse">
+  <li><a href="#model-adjustment-and-comparison-to-the-negative-binomial-model" id="toc-model-adjustment-and-comparison-to-the-negative-binomial-model" class="nav-link" data-scroll-target="#model-adjustment-and-comparison-to-the-negative-binomial-model">Model adjustment and comparison to the negative binomial model</a></li>
+  </ul></li>
+  
+  
+  
+  
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">Bibliography</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="published-202312-favrot-hierarchical.pdf"><i class="bi bi-file-pdf"></i>PDF (computo)</a></li></ul></div></nav>
     </div>
@@ -1403,37 +1406,41 @@ Figure&nbsp;8: Comparison of the “100% Y - 0% Z”, “0% Y - 100% Z”, “10
 <p>Results obtained from simulated data confirm that, when pest prevalence and pest intensity are collected separately in different trials, the model parameters are more accurately estimated combining both prevalence and intensity trials than using one type of trials only. We also find that, when prevalence data are collected in all trials and intensity data are collected in a subset of trials, estimations and pest treatment ranking are more accurate using both types of data than using prevalence data only. Moreover, when only one type of observation can be collected in a pest survey or in an experimental trial, our analysis indicates that it is usually better to collect intensity data than prevalence data, especially in situations where all or most of the plants are expected to be infested. Finally, our simulations show that it is unlikely to obtain accurate results with fewer than 40 trials when assessing the efficacy of pest control treatments based on prevalence and intensity data.</p>
 <p>Although our framework is illustrated to compare the efficacy of plant pest treatments, it could be applied to other areas of research in the future, in particular for optimizing designs used in animal and human epidemiology. It is imperative to note that the ultimate selection of a design should be contingent upon the consideration of local constraints. As the model codes are made fully available, we believe that these codes could be used by different institutes to compare many different designs in the future, not only the types of designs considered in our paper. Of particular significance is the capability of our model to optimize sample sizes, with its impact contingent on the relative importance of within-trial variability compared to between-trial variability.</p>
 </section>
-<section id="author-contributions" class="level1 unnumbered">
-<h1 class="unnumbered">Author contributions</h1>
-<p>AF and DM designed the study. AF performed the computations. AF and DM wrote the paper.</p>
+<section id="supplementary-material" class="level1 unnumbered">
+<h1 class="unnumbered">Supplementary material</h1>
+<section id="model-adjustment-and-comparison-to-the-negative-binomial-model" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="model-adjustment-and-comparison-to-the-negative-binomial-model">Model adjustment and comparison to the negative binomial model</h2>
+<p>To check the model’s fit to the data, we performed a posterior predictive check of our model to check that the data were compatible with the model assumptions. To do so, we computed the probability of exceeding each individual data with the fitted model (2). Note that the number of pest individuals per plant are not available in practice; the data correspond to observed numbers of pest individuals for groups of <span class="math inline">N_i</span> plants. Based on the posterior probability check, the computed probabilities were all falling in the range 0.22-0.93 (except for the observations equal to 0, for which the probability of being greater was equal to 1), and were thus not extreme. This result indicates that the model specified is not incompatible with the observed data and that the over-dispersion was correctly taken into account.</p>
+<p>We also fitted a new model including a negative binomial distribution instead of a Poisson distribution. The results were almost identical between both types of model. See the figure below.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="published-202312-favrot-hierarchical_files/figure-html/unnamed-chunk-3-1.svg" class="img-fluid figure-img"></p>
+<figcaption>Posterior predictive check, The X-axis is on a logarithmic scale and represents the number of aphids increased by 1.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="published-202312-favrot-hierarchical_files/figure-html/unnamed-chunk-4-1.svg" class="img-fluid figure-img"></p>
+<figcaption>Observed vs predicted values</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
-<section id="funding" class="level1 unnumbered">
-<h1 class="unnumbered">Funding</h1>
-<p>This work was partly funded by the project SEPIM (PNRI) and by the RMT SDMAA.</p>
 </section>
-<section id="data-availability" class="level1 unnumbered">
-<h1 class="unnumbered">Data availability</h1>
-<p>Simulated data and model parameters are available without restriction. The original experimental data may be available upon request.</p>
-</section>
-<section id="acknowledgements" class="level1 unnumbered">
-<h1 class="unnumbered">Acknowledgements</h1>
-<p>We are grateful to Anabelle Laurent, Elma Raaijmakers, Kathleen Antoons and to the institute ITB (https://www.itbfr.org/) for their comments on this project.</p>
-<p>We are grateful to the INRAE MIGALE bioinformatics facility (MIGALE, INRAE, 2020. Migale bioinformatics Facility, doi: 10.15454/1.5572390655343293E12) for providing help and/or computing and/or storage resources.</p>
-<p>The authors are thankful to the institutes that provided us with the data, namely the French Institut Technique de la Betterave, the sugar beet organisation of the Netherlands, and the Institut Royal Belge pour l’Amélioration de la Betterave.</p>
-</section>
+
+
+
+
 <section id="references" class="level1 unnumbered">
 <h1 class="unnumbered">References</h1>
-
-
-<!-- -->
-
-</section>
-<section id="bibliography" class="level1 unnumbered">
-
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Bibliography</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-agresti2015foundations" class="csl-entry" role="listitem">
 Agresti, Alan. 2015. <em>Foundations of Linear and Generalized Linear Models</em>. John Wiley &amp; Sons.
 </div>
@@ -1476,13 +1483,34 @@ Shaw, Allison K, Julie Sherman, F Keith Barker, and Marlene Zuk. 2018. <span>“
 <div id="ref-wood2017environmental" class="csl-entry" role="listitem">
 Wood, Thomas James, and Dave Goulson. 2017. <span>“The Environmental Risks of Neonicotinoid Pesticides: A Review of the Evidence Post 2013.”</span> <em>Environmental Science and Pollution Research</em> 24 (21): 17285–325.
 </div>
+</div>
+
+
+<!-- -->
+
+</section>
+
+<div id="quarto-appendix" class="default"><section id="author-contributions" class="level1 appendix" data-number="5"><h2 class="anchored quarto-appendix-heading"><span class="header-section-number">5</span> Author contributions</h2><div class="quarto-appendix-contents">
+
+<p>AF and DM designed the study. AF performed the computations. AF and DM wrote the paper.</p>
+</div></section><section id="funding" class="level1 appendix" data-number="6"><h2 class="anchored quarto-appendix-heading"><span class="header-section-number">6</span> Funding</h2><div class="quarto-appendix-contents">
+
+<p>This work was partly funded by the project SEPIM (PNRI) and by the RMT SDMAA.</p>
+</div></section><section id="data-availability" class="level1 appendix" data-number="7"><h2 class="anchored quarto-appendix-heading"><span class="header-section-number">7</span> Data availability</h2><div class="quarto-appendix-contents">
+
+<p>Simulated data and model parameters are available without restriction. The original experimental data may be available upon request.</p>
+</div></section><section id="acknowledgements" class="level1 appendix" data-number="8"><h2 class="anchored quarto-appendix-heading"><span class="header-section-number">8</span> Acknowledgements</h2><div class="quarto-appendix-contents">
+
+<p>We are grateful to Anabelle Laurent, Elma Raaijmakers, Kathleen Antoons and to the institute ITB (https://www.itbfr.org/) for their comments on this project.</p>
+<p>We are grateful to the INRAE MIGALE bioinformatics facility (MIGALE, INRAE, 2020. Migale bioinformatics Facility, doi: 10.15454/1.5572390655343293E12) for providing help and/or computing and/or storage resources.</p>
+<p>The authors are thankful to the institutes that provided us with the data, namely the French Institut Technique de la Betterave, the sugar beet organisation of the Netherlands, and the Institut Royal Belge pour l’Amélioration de la Betterave.</p>
 </div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@article{favrot2024,
   author = {Favrot, Armand and Makowski, David},
   publisher = {Société Française de Statistique},
   title = {A Hierarchical Model to Evaluate Pest Treatments from
     Prevalence and Intensity Data},
   journal = {Computo},
-  date = {2024-01-08},
+  date = {2024-01-09},
   url = {https://computo.sfds.asso.fr/published-202312-favrot-hierarchical},
   doi = {10.57750/6cgk-g727},
   issn = {2824-7795},
@@ -2802,29 +2830,37 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb4-814"><a href="#cb4-814" aria-hidden="true" tabindex="-1"></a>Results obtained from simulated data confirm that, when pest prevalence and pest intensity are collected separately in different trials, the model parameters are more accurately estimated combining both prevalence and intensity trials than using one type of trials only. We also find that, when prevalence data are collected in all trials and intensity data are collected in a subset of trials, estimations and pest treatment ranking are more accurate using both types of data than using prevalence data only. Moreover, when only one type of observation can be collected in a pest survey or in an experimental trial, our analysis indicates that it is usually better to collect intensity data than prevalence data, especially in situations where all or most of the plants are expected to be infested. Finally, our simulations show that it is unlikely to obtain accurate results with fewer than 40 trials when assessing the efficacy of pest control treatments based on prevalence and intensity data.</span>
 <span id="cb4-815"><a href="#cb4-815" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb4-816"><a href="#cb4-816" aria-hidden="true" tabindex="-1"></a>Although our framework is illustrated to compare the efficacy of plant pest treatments, it could be applied to other areas of research in the future, in particular for optimizing designs used in animal and human epidemiology. It is imperative to note that the ultimate selection of a design should be contingent upon the consideration of local constraints. As the model codes are made fully available, we believe that these codes could be used by different institutes to compare many different designs in the future, not only the types of designs considered in our paper. Of particular significance is the capability of our model to optimize sample sizes, with its impact contingent on the relative importance of within-trial variability compared to between-trial variability.    </span>
-<span id="cb4-817"><a href="#cb4-817" aria-hidden="true" tabindex="-1"></a>   </span>
-<span id="cb4-818"><a href="#cb4-818" aria-hidden="true" tabindex="-1"></a><span class="fu"># Author contributions {.unnumbered}</span></span>
+<span id="cb4-817"><a href="#cb4-817" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-818"><a href="#cb4-818" aria-hidden="true" tabindex="-1"></a><span class="fu"># Supplementary material { .unnumbered }</span></span>
 <span id="cb4-819"><a href="#cb4-819" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-820"><a href="#cb4-820" aria-hidden="true" tabindex="-1"></a>AF and DM designed the study. AF performed the computations. AF and DM wrote the paper.</span>
+<span id="cb4-820"><a href="#cb4-820" aria-hidden="true" tabindex="-1"></a>{{&lt; include published-202312-favrot-hierarchical-supp.qmd &gt;}}</span>
 <span id="cb4-821"><a href="#cb4-821" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-822"><a href="#cb4-822" aria-hidden="true" tabindex="-1"></a><span class="fu"># Funding {.unnumbered}</span></span>
+<span id="cb4-822"><a href="#cb4-822" aria-hidden="true" tabindex="-1"></a><span class="fu"># Author contributions {.appendix }</span></span>
 <span id="cb4-823"><a href="#cb4-823" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-824"><a href="#cb4-824" aria-hidden="true" tabindex="-1"></a>This work was partly funded by the project SEPIM (PNRI) and by the RMT SDMAA. </span>
-<span id="cb4-825"><a href="#cb4-825" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb4-826"><a href="#cb4-826" aria-hidden="true" tabindex="-1"></a><span class="fu"># Data availability {.unnumbered}</span></span>
-<span id="cb4-827"><a href="#cb4-827" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb4-828"><a href="#cb4-828" aria-hidden="true" tabindex="-1"></a>Simulated data and model parameters are available without restriction. The original experimental data may be available upon request.</span>
-<span id="cb4-829"><a href="#cb4-829" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-830"><a href="#cb4-830" aria-hidden="true" tabindex="-1"></a><span class="fu"># Acknowledgements {.unnumbered}</span></span>
-<span id="cb4-831"><a href="#cb4-831" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-832"><a href="#cb4-832" aria-hidden="true" tabindex="-1"></a>We are grateful to Anabelle Laurent, Elma Raaijmakers, Kathleen Antoons and to the institute ITB (https://www.itbfr.org/) for their comments on this project. </span>
+<span id="cb4-824"><a href="#cb4-824" aria-hidden="true" tabindex="-1"></a>AF and DM designed the study. AF performed the computations. AF and DM wrote the paper.</span>
+<span id="cb4-825"><a href="#cb4-825" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-826"><a href="#cb4-826" aria-hidden="true" tabindex="-1"></a><span class="fu"># Funding {.appendix}</span></span>
+<span id="cb4-827"><a href="#cb4-827" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-828"><a href="#cb4-828" aria-hidden="true" tabindex="-1"></a>This work was partly funded by the project SEPIM (PNRI) and by the RMT SDMAA. </span>
+<span id="cb4-829"><a href="#cb4-829" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-830"><a href="#cb4-830" aria-hidden="true" tabindex="-1"></a><span class="fu"># Data availability {.appendix }</span></span>
+<span id="cb4-831"><a href="#cb4-831" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-832"><a href="#cb4-832" aria-hidden="true" tabindex="-1"></a>Simulated data and model parameters are available without restriction. The original experimental data may be available upon request.</span>
 <span id="cb4-833"><a href="#cb4-833" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-834"><a href="#cb4-834" aria-hidden="true" tabindex="-1"></a>We are grateful to the INRAE MIGALE bioinformatics facility (MIGALE, INRAE, 2020. Migale bioinformatics Facility, doi: 10.15454/1.5572390655343293E12) for providing help and/or computing and/or storage resources.</span>
+<span id="cb4-834"><a href="#cb4-834" aria-hidden="true" tabindex="-1"></a><span class="fu"># Acknowledgements {.appendix }</span></span>
 <span id="cb4-835"><a href="#cb4-835" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-836"><a href="#cb4-836" aria-hidden="true" tabindex="-1"></a>The authors are thankful to the institutes that provided us with the data, namely the French Institut Technique de la Betterave, the sugar beet organisation of the Netherlands, and the Institut Royal Belge pour l'Amélioration de la Betterave.</span>
+<span id="cb4-836"><a href="#cb4-836" aria-hidden="true" tabindex="-1"></a>We are grateful to Anabelle Laurent, Elma Raaijmakers, Kathleen Antoons and to the institute ITB (https://www.itbfr.org/) for their comments on this project. </span>
 <span id="cb4-837"><a href="#cb4-837" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-838"><a href="#cb4-838" aria-hidden="true" tabindex="-1"></a><span class="fu"># References {.unnumbered} </span></span>
-<span id="cb4-839"><a href="#cb4-839" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-838"><a href="#cb4-838" aria-hidden="true" tabindex="-1"></a>We are grateful to the INRAE MIGALE bioinformatics facility (MIGALE, INRAE, 2020. Migale bioinformatics Facility, doi: 10.15454/1.5572390655343293E12) for providing help and/or computing and/or storage resources.</span>
+<span id="cb4-839"><a href="#cb4-839" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-840"><a href="#cb4-840" aria-hidden="true" tabindex="-1"></a>The authors are thankful to the institutes that provided us with the data, namely the French Institut Technique de la Betterave, the sugar beet organisation of the Netherlands, and the Institut Royal Belge pour l'Amélioration de la Betterave.</span>
+<span id="cb4-841"><a href="#cb4-841" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-842"><a href="#cb4-842" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-843"><a href="#cb4-843" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-844"><a href="#cb4-844" aria-hidden="true" tabindex="-1"></a><span class="fu"># References {.unnumbered} </span></span>
+<span id="cb4-845"><a href="#cb4-845" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-846"><a href="#cb4-846" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
+<span id="cb4-847"><a href="#cb4-847" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
