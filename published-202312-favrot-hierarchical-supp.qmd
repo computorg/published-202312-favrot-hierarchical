@@ -7,8 +7,7 @@ format: pdf
 library(ggplot2)
 ```
 
-
-# Model adjustment and comparison to the negative binomial model
+## Model adjustment and comparison to the negative binomial model { .unnumbered } 
 
 To check the model's fit to the data, we performed a posterior predictive check of our model to check that the data were compatible with the model assumptions. To do so, we computed the probability of exceeding each individual data with the fitted model (2). Note that the number of pest individuals per plant are not available in practice; the data correspond to observed numbers of pest individuals for groups of $N_i$ plants. Based on the posterior probability check, the computed probabilities were all falling in the range 0.22-0.93 (except for the observations equal to 0, for which the probability of being greater was equal to 1), and were thus not extreme. This result indicates that the model specified is not incompatible with the observed data and that the over-dispersion was correctly taken into account.
 

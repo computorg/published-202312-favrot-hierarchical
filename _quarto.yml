@@ -1,5 +1,7 @@
 project:
   type: website
   title: "published-202312-favrot-hierarchical"
+  render: 
+    - published-202312-favrot-hierarchical.qmd
 
 
