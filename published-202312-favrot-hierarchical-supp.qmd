@@ -14,7 +14,8 @@ MCMC_samples_of_predictions = readRDS(file = "data/MCMC_samples_of_predictions.r
 ```
 
 
-```{r, echo = FALSE}
+```{r fig-S1, echo = FALSE}
+#| label: fig-posterior-pred-check
 #| fig-cap: "Posterior predictive check, The X-axis is on a logarithmic scale and represents the number of aphids increased by 1."
 
 ggplot(MCMC_samples_of_predictions) +
@@ -26,9 +27,9 @@ ggplot(MCMC_samples_of_predictions) +
 ```
 
 
-```{r, echo = FALSE}
+```{r fig-S2, echo = FALSE}
+#| label: fig-obs-vs-pred
 #| fig-cap: "Observed vs predicted values"
-
 ggplot(MCMC_samples_of_predictions) +
     geom_point(aes(x = Y, y = prediction)) +
     xlab("Observed number of aphids") +
