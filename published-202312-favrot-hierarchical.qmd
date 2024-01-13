@@ -234,7 +234,7 @@ $$ {#eq-Efficacy}
 
 The quantity $\text{Ef}_{jt}$ corresponds to the expected percentage reduction of pest individuals (aphid numbers) for the j-th treatment compared to the untreated group, over trials and blocks. 
 
-Our Poisson log linear model includes an additive random dispersion term associated to each individual observation ($\epsilon_{ijkt}$ in @eq-model_lambda). This is a standard and well-recognized approach to deal with over-dispersion (@harrison2014using). In order to check the model assumptions, we perform a posterior predictive check of our model to check that the data were compatible with the model assumptions. Posterior predictive check is frequently used to look for systematic discrepancies between real and simulated data (@gelman1995bayesian). To do so, we compute the probability of exceeding each individual data with the fitted model (@eq-model_lambda). The computed probabilities are all falling in the range 0.22-0.93 (except for the observations equal to 0, for which the probability of being greater was equal to 1), and are thus not extreme. This result indicates that the model specified is not incompatible with the observed data and that the over-dispersion is correctly taken into account. In addition, we fit another model including a negative binomial distribution instead of a Poisson distribution. The results are almost identical between the two models.
+Our Poisson log linear model includes an additive random dispersion term associated to each individual observation ($\epsilon_{ijkt}$ in @eq-model_lambda). This is a standard and well-recognized approach to deal with over-dispersion (@harrison2014using). In order to check the model assumptions, we perform a posterior predictive check of our model to check that the data were compatible with the model assumptions (@sec-supplementary-material). Posterior predictive check is frequently used to look for systematic discrepancies between real and simulated data (@gelman1995bayesian). To do so, we compute the probability of exceeding each individual data with the fitted model (@eq-model_lambda). The computed probabilities are all falling in the range 0.22-0.93 (except for the observations equal to 0, for which the probability of being greater was equal to 1), and are thus not extreme. This result indicates that the model specified is not incompatible with the observed data and that the over-dispersion is correctly taken into account. In addition, we fit another model including a negative binomial distribution instead of a Poisson distribution. The results are almost identical between the two models (@sec-supplementary-material).
 
 ### Inference on real data
 
@@ -842,7 +842,7 @@ We are grateful to the INRAE MIGALE bioinformatics facility (MIGALE, INRAE, 2020
 
 The authors are thankful to the institutes that provided us with the data, namely the French Institut Technique de la Betterave, the sugar beet organisation of the Netherlands, and the Institut Royal Belge pour l'Amélioration de la Betterave.
 
-# Supplementary material {.unnumbered}
+# Supplementary material {.unnumbered} {#sec-supplementary-material}
 
 {{< include published-202312-favrot-hierarchical-supp.qmd >}}
 
