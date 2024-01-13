@@ -793,7 +793,9 @@ In case A (@tbl-params-future), the distribution of Z is such that Z is rarely c
 res_simu_q3_1 = readRDS(file = "results/Simulations/res_simu_q3_1.rds");   
 res_simu_q3_2 = readRDS(file = "results/Simulations/res_simu_q3_2.rds")
 
-res_simu_q3_1 = res_simu_q3_1 %>% mutate(Type = recode(Type, "100% Y - 100% Z" = "100% Y / 100% Z"))
+res_simu_q3_1 = res_simu_q3_1 %>% mutate(Type = recode(Type, 
+                                                       "100% Z" = "0% Y - 100% Z",
+                                                       "100% Y" = "100% Y - 0% Z"))
 
 types = res_simu_q3_1$Type %>% unique
 col = df_col %>% arrange(type) %>% filter(type %in% types) %>% select(col) %>% as.matrix %>% as.vector  
