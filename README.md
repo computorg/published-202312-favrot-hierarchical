@@ -11,7 +11,7 @@ by
 [![HTML](https://img.shields.io/badge/article-HTML-034E79)](https://computo.sfds.asso.fr/published-202312-favrot-hierarchical/)
 [![PDF](https://img.shields.io/badge/article-PDF-034E79)](https://computo.sfds.asso.fr/published-202312-favrot-hierarchical/published-202312-favrot-hierarchical.pdf)
 [![review 1](https://img.shields.io/badge/review-report%201-blue)](https://github.com/computorg/published-202312-favrot-hierarchical/issues/2)
-[![review 2](https://img.shields.io/badge/review-report%201-blue)](https://github.com/computorg/published-202312-favrot-hierarchical/issues/3)
+[![review 2](https://img.shields.io/badge/review-report%202-blue)](https://github.com/computorg/published-202312-favrot-hierarchical/issues/3)
 [![SWH](https://archive.softwareheritage.org/badge/origin/https://github.com/computorg/published-202312-favrot-hierarchical/)](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/computorg/published-202312-favrot-hierarchical)
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)
 
