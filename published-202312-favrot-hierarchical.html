@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.540">
+<meta name="generator" content="quarto-1.4.543">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -282,7 +282,7 @@ ISSN 2824-7795</p>
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">January 11, 2024</p>
+        <p class="date-modified">January 16, 2024</p>
       </div>
     </div>
       
@@ -350,7 +350,7 @@ ISSN 2824-7795</p>
   
   
   
-  <li><a href="#supplementary-material" id="toc-supplementary-material" class="nav-link" data-scroll-target="#supplementary-material">Supplementary material</a>
+  <li><a href="#sec-supplementary-material" id="toc-sec-supplementary-material" class="nav-link" data-scroll-target="#sec-supplementary-material">Supplementary material</a>
   <ul class="collapse">
   <li><a href="#model-adjustment-and-comparison-to-the-negative-binomial-model" id="toc-model-adjustment-and-comparison-to-the-negative-binomial-model" class="nav-link" data-scroll-target="#model-adjustment-and-comparison-to-the-negative-binomial-model">Model adjustment and comparison to the negative binomial model</a></li>
   </ul></li>
@@ -374,7 +374,7 @@ ISSN 2824-7795</p>
 <h1 data-number="2"><span class="header-section-number">2</span> Material and Method</h1>
 <section id="description-of-the-data" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="description-of-the-data"><span class="header-section-number">2.1</span> Description of the data</h2>
-<p>Data are collected in 32 field trials conducted in France, Belgium and the Netherlands to compare several treatments against aphids in sugar beets. Each trial consists in a plot located in a given site at a given year (site-year) divided into one to four blocks. Each of these blocks is itself divided into strips where different treatments are tested, one of these treatments being an untreated control and the others corresponding to different types of insecticide. In each strip of each block, the number of aphids is counted on a sample of 10 beet plants (intensity). The number of infested plants (prevalence) is measured as well, but only in 15 trials out of 32. The total numbers of intensity and prevalence data are equal to 1128 and 561, respectively. Note that the number of aphids is not counted on each beet plant but in the whole plant sample. Intensity and prevalence are monitored at different times after treatments. As shown in <a href="#fig-one" class="quarto-xref">Figure&nbsp;1</a> A, the data set is unbalanced as less data are available for the treatment Mavrik-jet compared to the others. <strong>?@fig-one-1</strong> B shows that the intensity and prevalence tend to increase with time.</p>
+<p>Data are collected in 32 field trials conducted in France, Belgium and the Netherlands to compare several treatments against aphids in sugar beets. Each trial consists in a plot located in a given site at a given year (site-year) divided into one to four blocks. Each of these blocks is itself divided into strips where different treatments are tested, one of these treatments being an untreated control and the others corresponding to different types of insecticide. In each strip of each block, the number of aphids is counted on a sample of 10 beet plants (intensity). The number of infested plants (prevalence) is measured as well, but only in 15 trials out of 32. The total numbers of intensity and prevalence data are equal to 1128 and 561, respectively. Note that the number of aphids is not counted on each beet plant but in the whole plant sample. Intensity and prevalence are monitored at different times after treatments. As shown in <a href="#fig-one" class="quarto-xref">Figure&nbsp;1</a> A, the data set is unbalanced as less data are available for the treatment Mavrik-jet compared to the others. <a href="#fig-one" class="quarto-xref">Figure&nbsp;1</a> B shows that the intensity and prevalence tend to increase with time.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-one" class="quarto-figure quarto-figure-center quarto-float anchored">
@@ -508,7 +508,7 @@ Table&nbsp;1: Description of the indices, inputs and parameters used in the mode
     \text{Ef}_{jt} = \Big(1 - \text{exp}\big(\gamma_{0j}+\gamma_{1j} \times X_{t}\big)\Big) \times 100
 \tag{5}</span></span></p>
 <p>The quantity <span class="math inline">\text{Ef}_{jt}</span> corresponds to the expected percentage reduction of pest individuals (aphid numbers) for the j-th treatment compared to the untreated group, over trials and blocks.</p>
-<p>Our Poisson log linear model includes an additive random dispersion term associated to each individual observation (<span class="math inline">\epsilon_{ijkt}</span> in <a href="#eq-model_lambda" class="quarto-xref">Equation&nbsp;2</a>). This is a standard and well-recognized approach to deal with over-dispersion (<span class="citation" data-cites="harrison2014using">Harrison (<a href="#ref-harrison2014using" role="doc-biblioref">2014</a>)</span>). In order to check the model assumptions, we perform a posterior predictive check of our model to check that the data were compatible with the model assumptions. Posterior predictive check is frequently used to look for systematic discrepancies between real and simulated data (<span class="citation" data-cites="gelman1995bayesian">Gelman et al. (<a href="#ref-gelman1995bayesian" role="doc-biblioref">1995</a>)</span>). To do so, we compute the probability of exceeding each individual data with the fitted model (<a href="#eq-model_lambda" class="quarto-xref">Equation&nbsp;2</a>). The computed probabilities are all falling in the range 0.22-0.93 (except for the observations equal to 0, for which the probability of being greater was equal to 1), and are thus not extreme. This result indicates that the model specified is not incompatible with the observed data and that the over-dispersion is correctly taken into account. In addition, we fit another model including a negative binomial distribution instead of a Poisson distribution. The results are almost identical between the two models.</p>
+<p>Our Poisson log linear model includes an additive random dispersion term associated to each individual observation (<span class="math inline">\epsilon_{ijkt}</span> in <a href="#eq-model_lambda" class="quarto-xref">Equation&nbsp;2</a>). This is a standard and well-recognized approach to deal with over-dispersion (<span class="citation" data-cites="harrison2014using">Harrison (<a href="#ref-harrison2014using" role="doc-biblioref">2014</a>)</span>). In order to check the model assumptions, we perform a posterior predictive check of our model to check that the data were compatible with the model assumptions (<a href="#sec-supplementary-material">Supplementary material</a>). Posterior predictive check is frequently used to look for systematic discrepancies between real and simulated data (<span class="citation" data-cites="gelman1995bayesian">Gelman et al. (<a href="#ref-gelman1995bayesian" role="doc-biblioref">1995</a>)</span>). To do so, we compute the probability of exceeding each individual data with the fitted model (<a href="#eq-model_lambda" class="quarto-xref">Equation&nbsp;2</a>). The computed probabilities are all falling in the range 0.22-0.93 (except for the observations equal to 0, for which the probability of being greater was equal to 1), and are thus not extreme. This result indicates that the model specified is not incompatible with the observed data and that the over-dispersion is correctly taken into account. In addition, we fit another model including a negative binomial distribution instead of a Poisson distribution. The results are almost identical between the two models (<a href="#sec-supplementary-material">Supplementary material</a>).</p>
 </section>
 <section id="inference-on-real-data" class="level3" data-number="2.2.2">
 <h3 data-number="2.2.2" class="anchored" data-anchor-id="inference-on-real-data"><span class="header-section-number">2.2.2</span> Inference on real data</h3>
@@ -1444,15 +1444,15 @@ Table&nbsp;7: Parameters considered for the design of future pest surveys.”
 </figure>
 </div>
 </div>
-<p><strong>?@fig-height</strong> (A.1, B.1 and C.1) shows the mean absolute error <span class="math inline">E_{\gamma}</span> (<a href="#eq-E_gamma" class="quarto-xref">Equation&nbsp;6</a>) as a function of the number of trials for the four scenarios “100% Y - 0% Z”, “0% Y - 100% Z”, “100% Y / 100% Z” and “100% W”. <strong>?@fig-height</strong> (A.2, B.2 and C.2) shows the distributions of infested plants with 40 trials corresponding to the three values of <span class="math inline">\alpha_0</span> reported in <a href="#tbl-params-future" class="quarto-xref">Table&nbsp;7</a>. In case A (<a href="#tbl-params-future" class="quarto-xref">Table&nbsp;7</a>), the distribution of Z is such that Z is rarely close to 1 and often lower than 0.5 (<strong>?@fig-height</strong> A.2). In case C, the distribution of Z is such that Z is often very close to 1 (100% of plants infested). Case B is intermediate. The accuracy of the estimated values of the model parameters <span class="math inline">\gamma</span> is better with scenario “100% Y - 0% Z” than with scenario “0% Y - 100% Z”, for all number of trials. The advantage of “100% Y - 0% Z” is stronger in case of high pest prevalence (i.e., cases B and C) but very small in case of low pest prevalence (case A). For example, with 20 trials, the mean absolute error is 27% lower in the scenario “100% Y - 0% Z” than in “0% Y - 100% Z” for parameter set C (0.55 vs.&nbsp;0.75), 10% lower for parameter set B (0.55 vs.&nbsp;0.62), and not different for parameter set A (0.64). The “100% W” scenario leads to similar results as “100% Y - 0% Z”, regardless of <span class="math inline">\alpha_0</span> and the number of trials. Results obtained with “100% Y / 100% Z” are generally similar to those obtained with “100% Y - 0% Z” and “100% W” but better than those obtained with the scenario “0% Y - 100% Z” in cases B and C. Here again, results show that 20 trials are not sufficient to obtain accurate parameter estimates.</p>
+<p><a href="#fig-height" class="quarto-xref">Figure&nbsp;8</a> (A.1, B.1 and C.1) shows the mean absolute error <span class="math inline">E_{\gamma}</span> (<a href="#eq-E_gamma" class="quarto-xref">Equation&nbsp;6</a>) as a function of the number of trials for the four scenarios “100% Y - 0% Z”, “0% Y - 100% Z”, “100% Y / 100% Z” and “100% W”. <a href="#fig-height" class="quarto-xref">Figure&nbsp;8</a> (A.2, B.2 and C.2) shows the distributions of infested plants with 40 trials corresponding to the three values of <span class="math inline">\alpha_0</span> reported in <a href="#tbl-params-future" class="quarto-xref">Table&nbsp;7</a>. In case A (<a href="#tbl-params-future" class="quarto-xref">Table&nbsp;7</a>), the distribution of Z is such that Z is rarely close to 1 and often lower than 0.5 (<a href="#fig-height" class="quarto-xref">Figure&nbsp;8</a> A.2). In case C, the distribution of Z is such that Z is often very close to 1 (100% of plants infested). Case B is intermediate. The accuracy of the estimated values of the model parameters <span class="math inline">\gamma</span> is better with scenario “100% Y - 0% Z” than with scenario “0% Y - 100% Z”, for all number of trials. The advantage of “100% Y - 0% Z” is stronger in case of high pest prevalence (i.e., cases B and C) but very small in case of low pest prevalence (case A). For example, with 20 trials, the mean absolute error is 27% lower in the scenario “100% Y - 0% Z” than in “0% Y - 100% Z” for parameter set C (0.55 vs.&nbsp;0.75), 10% lower for parameter set B (0.55 vs.&nbsp;0.62), and not different for parameter set A (0.64). The “100% W” scenario leads to similar results as “100% Y - 0% Z”, regardless of <span class="math inline">\alpha_0</span> and the number of trials. Results obtained with “100% Y / 100% Z” are generally similar to those obtained with “100% Y - 0% Z” and “100% W” but better than those obtained with the scenario “0% Y - 100% Z” in cases B and C. Here again, results show that 20 trials are not sufficient to obtain accurate parameter estimates.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-eight" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-height" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-eight-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="published-202312-favrot-hierarchical_files/figure-html/fig-eight-1.svg" class="img-fluid figure-img" style="width:100.0%">
+<div aria-describedby="fig-height-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="published-202312-favrot-hierarchical_files/figure-html/fig-height-1.svg" class="img-fluid figure-img" style="width:100.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-eight-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-height-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;8: Comparison of the “100% Y - 0% Z”, “0% Y - 100% Z”, “100% Y / 100% Z” and “100% W” scenarios according to the distribution of <span class="math inline">Z</span> and the number of trials, using the <span class="math inline">E_{\gamma}</span> criterion (<a href="#eq-E_gamma" class="quarto-xref">Equation&nbsp;6</a>). <strong>A</strong>, <strong>B</strong> and <strong>C</strong> correspond to different <span class="math inline">Z</span> distributions which are given by A.2, B.2 and C.2 (distribution for a number of trials equal to 40). A, B and C respectively correspond to <span class="math inline">\alpha_0 =</span> -1, 1 and 2. The details of the simulation parameters are given in <a href="#tbl-params-future" class="quarto-xref">Table&nbsp;7</a>. A1, B1 and C1 represent the absolute error <span class="math inline">E_{\gamma}</span> averaged over the 974 simulated data sets as a function of the number of trials. Colors correspond to the different scenarios.
 </figcaption>
 </figure>
@@ -1473,12 +1473,12 @@ Figure&nbsp;8: Comparison of the “100% Y - 0% Z”, “0% Y - 100% Z”, “10
 
 
 
-<section id="supplementary-material" class="level1 unnumbered">
+<section id="sec-supplementary-material" class="level1 unnumbered">
 <h1 class="unnumbered">Supplementary material</h1>
 <section id="model-adjustment-and-comparison-to-the-negative-binomial-model" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="model-adjustment-and-comparison-to-the-negative-binomial-model">Model adjustment and comparison to the negative binomial model</h2>
-<p>To check the model’s fit to the data, we performed a posterior predictive check of our model to check that the data were compatible with the model assumptions. To do so, we computed the probability of exceeding each individual data with the fitted model (2). Note that the number of pest individuals per plant are not available in practice; the data correspond to observed numbers of pest individuals for groups of <span class="math inline">N_i</span> plants. Based on the posterior probability check, the computed probabilities were all falling in the range 0.22-0.93 (except for the observations equal to 0, for which the probability of being greater was equal to 1), and were thus not extreme. This result indicates that the model specified is not incompatible with the observed data and that the over-dispersion was correctly taken into account.</p>
-<p>We also fitted a new model including a negative binomial distribution instead of a Poisson distribution. The results were almost identical between both types of model. See the figure below.</p>
+<p>To check the model’s fit to the data, we performed a posterior predictive check of our model to check that the data were compatible with the model assumptions. To do so, we computed the probability of exceeding each individual data with the fitted model (2). Note that the number of pest individuals per plant are not available in practice; the data correspond to observed numbers of pest individuals for groups of <span class="math inline">N_i</span> plants. Based on the posterior probability check (<a href="#fig-posterior-pred-check" class="quarto-xref">Figure&nbsp;9</a>), the computed probabilities were all falling in the range 0.22-0.93 (except for the observations equal to 0, for which the probability of being greater was equal to 1), and were thus not extreme. This result indicates that the model specified is not incompatible with the observed data and that the over-dispersion was correctly taken into account.</p>
+<p>We also fitted a new model including a negative binomial distribution instead of a Poisson distribution. The results were almost identical between both types of model (<a href="#fig-obs-vs-pred" class="quarto-xref">Figure&nbsp;10</a>).</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-posterior-pred-check" class="quarto-figure quarto-figure-center quarto-float anchored">
@@ -1487,7 +1487,7 @@ Figure&nbsp;8: Comparison of the “100% Y - 0% Z”, “0% Y - 100% Z”, “10
 <img src="published-202312-favrot-hierarchical_files/figure-html/fig-posterior-pred-check-1.svg" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-posterior-pred-check-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;9: Posterior predictive check, The X-axis is on a logarithmic scale and represents the number of aphids increased by 1.
+Figure&nbsp;9: Posterior predictive check, The x-axis is on a logarithmic scale and represents the number of aphids increased by 1.
 </figcaption>
 </figure>
 </div>
@@ -1501,7 +1501,7 @@ Figure&nbsp;9: Posterior predictive check, The X-axis is on a logarithmic scale 
 <img src="published-202312-favrot-hierarchical_files/figure-html/fig-obs-vs-pred-1.svg" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-obs-vs-pred-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10: Observed vs predicted values
+Figure&nbsp;10: Observed vs predicted values.
 </figcaption>
 </figure>
 </div>
@@ -1864,7 +1864,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      return note.innerHTML;
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -2180,7 +2185,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a><span class="fu">## Description of the data</span></span>
 <span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a>Data are collected in 32 field trials conducted in France, Belgium and the Netherlands to compare several treatments against aphids in sugar beets. Each trial consists in a plot located in a given site at a given year (site-year) divided into one to four blocks. Each of these blocks is itself divided into strips where different treatments are tested, one of these treatments being an untreated control and the others corresponding to different types of insecticide. In each strip of each block, the number of aphids is counted on a sample of 10 beet plants (intensity). The number of infested plants (prevalence) is measured as well, but only in 15 trials out of 32. The total numbers of intensity and prevalence data are equal to 1128 and 561, respectively. Note that the number of aphids is not counted on each beet plant but in the whole plant sample. Intensity and prevalence are monitored at different times after treatments. As shown in @fig-one A, the data set is unbalanced as less data are available for the treatment Mavrik-jet compared to the others. @fig-one-1 B shows that the intensity and prevalence tend to increase with time. </span>
+<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a>Data are collected in 32 field trials conducted in France, Belgium and the Netherlands to compare several treatments against aphids in sugar beets. Each trial consists in a plot located in a given site at a given year (site-year) divided into one to four blocks. Each of these blocks is itself divided into strips where different treatments are tested, one of these treatments being an untreated control and the others corresponding to different types of insecticide. In each strip of each block, the number of aphids is counted on a sample of 10 beet plants (intensity). The number of infested plants (prevalence) is measured as well, but only in 15 trials out of 32. The total numbers of intensity and prevalence data are equal to 1128 and 561, respectively. Note that the number of aphids is not counted on each beet plant but in the whole plant sample. Intensity and prevalence are monitored at different times after treatments. As shown in @fig-one A, the data set is unbalanced as less data are available for the treatment Mavrik-jet compared to the others. @fig-one B shows that the intensity and prevalence tend to increase with time. </span>
 <span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-99"><a href="#cb4-99" aria-hidden="true" tabindex="-1"></a></span>
@@ -2321,7 +2326,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb4-234"><a href="#cb4-234" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-235"><a href="#cb4-235" aria-hidden="true" tabindex="-1"></a>The quantity $\text{Ef}_{jt}$ corresponds to the expected percentage reduction of pest individuals (aphid numbers) for the j-th treatment compared to the untreated group, over trials and blocks. </span>
 <span id="cb4-236"><a href="#cb4-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-237"><a href="#cb4-237" aria-hidden="true" tabindex="-1"></a>Our Poisson log linear model includes an additive random dispersion term associated to each individual observation ($\epsilon_{ijkt}$ in @eq-model_lambda). This is a standard and well-recognized approach to deal with over-dispersion (@harrison2014using). In order to check the model assumptions, we perform a posterior predictive check of our model to check that the data were compatible with the model assumptions. Posterior predictive check is frequently used to look for systematic discrepancies between real and simulated data (@gelman1995bayesian). To do so, we compute the probability of exceeding each individual data with the fitted model (@eq-model_lambda). The computed probabilities are all falling in the range 0.22-0.93 (except for the observations equal to 0, for which the probability of being greater was equal to 1), and are thus not extreme. This result indicates that the model specified is not incompatible with the observed data and that the over-dispersion is correctly taken into account. In addition, we fit another model including a negative binomial distribution instead of a Poisson distribution. The results are almost identical between the two models.</span>
+<span id="cb4-237"><a href="#cb4-237" aria-hidden="true" tabindex="-1"></a>Our Poisson log linear model includes an additive random dispersion term associated to each individual observation ($\epsilon_{ijkt}$ in @eq-model_lambda). This is a standard and well-recognized approach to deal with over-dispersion (@harrison2014using). In order to check the model assumptions, we perform a posterior predictive check of our model to check that the data were compatible with the model assumptions (<span class="co">[</span><span class="ot">Supplementary material</span><span class="co">](#sec-supplementary-material)</span>). Posterior predictive check is frequently used to look for systematic discrepancies between real and simulated data (@gelman1995bayesian). To do so, we compute the probability of exceeding each individual data with the fitted model (@eq-model_lambda). The computed probabilities are all falling in the range 0.22-0.93 (except for the observations equal to 0, for which the probability of being greater was equal to 1), and are thus not extreme. This result indicates that the model specified is not incompatible with the observed data and that the over-dispersion is correctly taken into account. In addition, we fit another model including a negative binomial distribution instead of a Poisson distribution. The results are almost identical between the two models (<span class="co">[</span><span class="ot">Supplementary material</span><span class="co">](#sec-supplementary-material)</span>).</span>
 <span id="cb4-238"><a href="#cb4-238" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-239"><a href="#cb4-239" aria-hidden="true" tabindex="-1"></a><span class="fu">### Inference on real data</span></span>
 <span id="cb4-240"><a href="#cb4-240" aria-hidden="true" tabindex="-1"></a></span>
@@ -2874,69 +2879,71 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb4-787"><a href="#cb4-787" aria-hidden="true" tabindex="-1"></a>In case A (@tbl-params-future), the distribution of Z is such that Z is rarely close to 1 and often lower than 0.5 (@fig-height A.2). In case C, the distribution of Z is such that Z is often very close to 1 (100% of plants infested). Case B is intermediate. The accuracy of the estimated values of the model parameters $\gamma$ is better with scenario "100% Y - 0% Z" than with scenario "0% Y - 100% Z", for all number of trials. The advantage of "100% Y - 0% Z" is stronger in case of high pest prevalence (i.e., cases B and C) but very small in case of low pest prevalence (case A). For example, with 20 trials, the mean absolute error is 27% lower in the scenario "100% Y - 0% Z" than in "0% Y - 100% Z" for parameter set C (0.55 vs. 0.75), 10% lower for parameter set B (0.55 vs. 0.62), and not different for parameter set A (0.64). The "100% W" scenario leads to similar results as "100% Y - 0% Z", regardless of $\alpha_0$ and the number of trials. Results obtained with "100% Y / 100% Z" are generally similar to those obtained with "100% Y - 0% Z" and "100% W" but better than those obtained with the scenario "0% Y - 100% Z" in cases B and C. Here again, results show that 20 trials are not sufficient to obtain accurate parameter estimates.</span>
 <span id="cb4-788"><a href="#cb4-788" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-789"><a href="#cb4-789" aria-hidden="true" tabindex="-1"></a><span class="in">```{r figure8, cache = FALSE, out.width="100%", fig.height = 6, echo = FALSE}</span></span>
-<span id="cb4-790"><a href="#cb4-790" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: fig-eight</span></span>
+<span id="cb4-790"><a href="#cb4-790" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: fig-height</span></span>
 <span id="cb4-791"><a href="#cb4-791" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-cap: "Comparison of the \"100% Y - 0% Z\", \"0% Y - 100% Z\", \"100% Y / 100% Z\" and \"100% W\" scenarios according to the distribution of $Z$ and the number of trials, using the $E_{\\gamma}$ criterion (@eq-E_gamma). **A**, **B** and **C** correspond to different $Z$ distributions which are given by A.2, B.2 and C.2 (distribution for a number of trials equal to 40). A, B and C respectively correspond to $\\alpha_0 =$ -1, 1 and 2. The details of the simulation parameters are given in @tbl-params-future. A1, B1 and C1 represent the absolute error $E_{\\gamma}$ averaged over the 974 simulated data sets as a function of the number of trials. Colors correspond to the different scenarios."</span></span>
 <span id="cb4-792"><a href="#cb4-792" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-793"><a href="#cb4-793" aria-hidden="true" tabindex="-1"></a><span class="in">res_simu_q3_1 = readRDS(file = "results/Simulations/res_simu_q3_1.rds");   </span></span>
 <span id="cb4-794"><a href="#cb4-794" aria-hidden="true" tabindex="-1"></a><span class="in">res_simu_q3_2 = readRDS(file = "results/Simulations/res_simu_q3_2.rds")</span></span>
 <span id="cb4-795"><a href="#cb4-795" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-796"><a href="#cb4-796" aria-hidden="true" tabindex="-1"></a><span class="in">res_simu_q3_1 = res_simu_q3_1 %&gt;% mutate(Type = recode(Type, "100% Y - 100% Z" = "100% Y / 100% Z"))</span></span>
-<span id="cb4-797"><a href="#cb4-797" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-798"><a href="#cb4-798" aria-hidden="true" tabindex="-1"></a><span class="in">types = res_simu_q3_1$Type %&gt;% unique</span></span>
-<span id="cb4-799"><a href="#cb4-799" aria-hidden="true" tabindex="-1"></a><span class="in">col = df_col %&gt;% arrange(type) %&gt;% filter(type %in% types) %&gt;% select(col) %&gt;% as.matrix %&gt;% as.vector  </span></span>
-<span id="cb4-800"><a href="#cb4-800" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-801"><a href="#cb4-801" aria-hidden="true" tabindex="-1"></a><span class="in">g1 = suppressWarnings(ggplot(res_simu_q3_1) + geom_point(aes(x = I, y = Mean_MAE, color = Type), size = 1) +</span></span>
-<span id="cb4-802"><a href="#cb4-802" aria-hidden="true" tabindex="-1"></a><span class="in">              geom_line(aes(x = I, y = Mean_MAE, color = Type), size = 0.2) +</span></span>
-<span id="cb4-803"><a href="#cb4-803" aria-hidden="true" tabindex="-1"></a><span class="in">    facet_wrap(~ alpha0, ncol = 1, labeller = label_wrap_gen(multi_line = FALSE)) + </span></span>
-<span id="cb4-804"><a href="#cb4-804" aria-hidden="true" tabindex="-1"></a><span class="in">    ylab(TeX("Mean relative absolute error for $\\gamma$")) + scale_color_manual(values = col[c(1, 2, 3, 4)]) + theme(plot.margin = margin(l = 0)) +</span></span>
-<span id="cb4-805"><a href="#cb4-805" aria-hidden="true" tabindex="-1"></a><span class="in">    xlab("Number of trials") + theme(legend.position = "bottom", plot.margin = margin(t = 0, l = 0))) </span></span>
-<span id="cb4-806"><a href="#cb4-806" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-807"><a href="#cb4-807" aria-hidden="true" tabindex="-1"></a><span class="in">legend = cowplot::get_legend(g1)</span></span>
+<span id="cb4-796"><a href="#cb4-796" aria-hidden="true" tabindex="-1"></a><span class="in">res_simu_q3_1 = res_simu_q3_1 %&gt;% mutate(Type = recode(Type, </span></span>
+<span id="cb4-797"><a href="#cb4-797" aria-hidden="true" tabindex="-1"></a><span class="in">                                                       "100% Z" = "0% Y - 100% Z",</span></span>
+<span id="cb4-798"><a href="#cb4-798" aria-hidden="true" tabindex="-1"></a><span class="in">                                                       "100% Y" = "100% Y - 0% Z"))</span></span>
+<span id="cb4-799"><a href="#cb4-799" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-800"><a href="#cb4-800" aria-hidden="true" tabindex="-1"></a><span class="in">types = res_simu_q3_1$Type %&gt;% unique</span></span>
+<span id="cb4-801"><a href="#cb4-801" aria-hidden="true" tabindex="-1"></a><span class="in">col = df_col %&gt;% arrange(type) %&gt;% filter(type %in% types) %&gt;% select(col) %&gt;% as.matrix %&gt;% as.vector  </span></span>
+<span id="cb4-802"><a href="#cb4-802" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-803"><a href="#cb4-803" aria-hidden="true" tabindex="-1"></a><span class="in">g1 = suppressWarnings(ggplot(res_simu_q3_1) + geom_point(aes(x = I, y = Mean_MAE, color = Type), size = 1) +</span></span>
+<span id="cb4-804"><a href="#cb4-804" aria-hidden="true" tabindex="-1"></a><span class="in">              geom_line(aes(x = I, y = Mean_MAE, color = Type), size = 0.2) +</span></span>
+<span id="cb4-805"><a href="#cb4-805" aria-hidden="true" tabindex="-1"></a><span class="in">    facet_wrap(~ alpha0, ncol = 1, labeller = label_wrap_gen(multi_line = FALSE)) + </span></span>
+<span id="cb4-806"><a href="#cb4-806" aria-hidden="true" tabindex="-1"></a><span class="in">    ylab(TeX("Mean relative absolute error for $\\gamma$")) + scale_color_manual(values = col[c(1, 2, 3, 4)]) + theme(plot.margin = margin(l = 0)) +</span></span>
+<span id="cb4-807"><a href="#cb4-807" aria-hidden="true" tabindex="-1"></a><span class="in">    xlab("Number of trials") + theme(legend.position = "bottom", plot.margin = margin(t = 0, l = 0))) </span></span>
 <span id="cb4-808"><a href="#cb4-808" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-809"><a href="#cb4-809" aria-hidden="true" tabindex="-1"></a><span class="in">g2 = suppressWarnings(ggplot(res_simu_q3_2) + geom_histogram(aes(Z), stat = "count", fill = "#4345a1") + facet_wrap(~ alpha0, ncol = 1) + </span></span>
-<span id="cb4-810"><a href="#cb4-810" aria-hidden="true" tabindex="-1"></a><span class="in">    ylab("Number of observations") + theme(plot.margin = margin(r = 0, l = 15, t = 0)) + xlab("Number of infested beets"))</span></span>
-<span id="cb4-811"><a href="#cb4-811" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-812"><a href="#cb4-812" aria-hidden="true" tabindex="-1"></a><span class="in">suppressWarnings(do.call("grid.arrange", c(list(legend), list(g1  + theme(legend.position = "none"), g2), list(ncol = 2, layout_matrix = rbind(c(2, 3), c(1, 1)), heights = c(1, 0.2)))))</span></span>
-<span id="cb4-813"><a href="#cb4-813" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb4-814"><a href="#cb4-814" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-815"><a href="#cb4-815" aria-hidden="true" tabindex="-1"></a><span class="fu"># Conclusion</span></span>
-<span id="cb4-816"><a href="#cb4-816" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb4-817"><a href="#cb4-817" aria-hidden="true" tabindex="-1"></a>In order to evaluate pest treatment efficacy, numerous trials are conducted to monitor pest prevalence and intensity. Quite often, only one type of data is available and, when both prevalence and intensity are available, they are usually analysed separately. In this paper, we propose an alternative approach based on a hierarchical statistical model able to analyze intensity and prevalence data, simultaneously.</span>
-<span id="cb4-818"><a href="#cb4-818" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb4-819"><a href="#cb4-819" aria-hidden="true" tabindex="-1"></a>We successfully apply the model to a real data set including prevalence and incidence data collected to evaluate three pesticide treatments against aphids in sugar beets. The model is fitted to this data set using a Markov chain Monte Carlo algorithm, and convergence was quickly achieved after a few thousands iterations. Results show that the use of both prevalence and intensity data led to a substantial reduction of the uncertainty in the parameter estimates, compared to the use of a single type of data.</span>
-<span id="cb4-820"><a href="#cb4-820" aria-hidden="true" tabindex="-1"></a>   </span>
-<span id="cb4-821"><a href="#cb4-821" aria-hidden="true" tabindex="-1"></a>Results obtained from simulated data confirm that, when pest prevalence and pest intensity are collected separately in different trials, the model parameters are more accurately estimated combining both prevalence and intensity trials than using one type of trials only. We also find that, when prevalence data are collected in all trials and intensity data are collected in a subset of trials, estimations and pest treatment ranking are more accurate using both types of data than using prevalence data only. Moreover, when only one type of observation can be collected in a pest survey or in an experimental trial, our analysis indicates that it is usually better to collect intensity data than prevalence data, especially in situations where all or most of the plants are expected to be infested. Finally, our simulations show that it is unlikely to obtain accurate results with fewer than 40 trials when assessing the efficacy of pest control treatments based on prevalence and intensity data.</span>
-<span id="cb4-822"><a href="#cb4-822" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb4-823"><a href="#cb4-823" aria-hidden="true" tabindex="-1"></a>Although our framework is illustrated to compare the efficacy of plant pest treatments, it could be applied to other areas of research in the future, in particular for optimizing designs used in animal and human epidemiology. It is imperative to note that the ultimate selection of a design should be contingent upon the consideration of local constraints. As the model codes are made fully available, we believe that these codes could be used by different institutes to compare many different designs in the future, not only the types of designs considered in our paper. Of particular significance is the capability of our model to optimize sample sizes, with its impact contingent on the relative importance of within-trial variability compared to between-trial variability.    </span>
-<span id="cb4-824"><a href="#cb4-824" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-825"><a href="#cb4-825" aria-hidden="true" tabindex="-1"></a><span class="fu"># Author contributions {.appendix}</span></span>
+<span id="cb4-809"><a href="#cb4-809" aria-hidden="true" tabindex="-1"></a><span class="in">legend = cowplot::get_legend(g1)</span></span>
+<span id="cb4-810"><a href="#cb4-810" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-811"><a href="#cb4-811" aria-hidden="true" tabindex="-1"></a><span class="in">g2 = suppressWarnings(ggplot(res_simu_q3_2) + geom_histogram(aes(Z), stat = "count", fill = "#4345a1") + facet_wrap(~ alpha0, ncol = 1) + </span></span>
+<span id="cb4-812"><a href="#cb4-812" aria-hidden="true" tabindex="-1"></a><span class="in">    ylab("Number of observations") + theme(plot.margin = margin(r = 0, l = 15, t = 0)) + xlab("Number of infested beets"))</span></span>
+<span id="cb4-813"><a href="#cb4-813" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-814"><a href="#cb4-814" aria-hidden="true" tabindex="-1"></a><span class="in">suppressWarnings(do.call("grid.arrange", c(list(legend), list(g1  + theme(legend.position = "none"), g2), list(ncol = 2, layout_matrix = rbind(c(2, 3), c(1, 1)), heights = c(1, 0.2)))))</span></span>
+<span id="cb4-815"><a href="#cb4-815" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-816"><a href="#cb4-816" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-817"><a href="#cb4-817" aria-hidden="true" tabindex="-1"></a><span class="fu"># Conclusion</span></span>
+<span id="cb4-818"><a href="#cb4-818" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-819"><a href="#cb4-819" aria-hidden="true" tabindex="-1"></a>In order to evaluate pest treatment efficacy, numerous trials are conducted to monitor pest prevalence and intensity. Quite often, only one type of data is available and, when both prevalence and intensity are available, they are usually analysed separately. In this paper, we propose an alternative approach based on a hierarchical statistical model able to analyze intensity and prevalence data, simultaneously.</span>
+<span id="cb4-820"><a href="#cb4-820" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-821"><a href="#cb4-821" aria-hidden="true" tabindex="-1"></a>We successfully apply the model to a real data set including prevalence and incidence data collected to evaluate three pesticide treatments against aphids in sugar beets. The model is fitted to this data set using a Markov chain Monte Carlo algorithm, and convergence was quickly achieved after a few thousands iterations. Results show that the use of both prevalence and intensity data led to a substantial reduction of the uncertainty in the parameter estimates, compared to the use of a single type of data.</span>
+<span id="cb4-822"><a href="#cb4-822" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb4-823"><a href="#cb4-823" aria-hidden="true" tabindex="-1"></a>Results obtained from simulated data confirm that, when pest prevalence and pest intensity are collected separately in different trials, the model parameters are more accurately estimated combining both prevalence and intensity trials than using one type of trials only. We also find that, when prevalence data are collected in all trials and intensity data are collected in a subset of trials, estimations and pest treatment ranking are more accurate using both types of data than using prevalence data only. Moreover, when only one type of observation can be collected in a pest survey or in an experimental trial, our analysis indicates that it is usually better to collect intensity data than prevalence data, especially in situations where all or most of the plants are expected to be infested. Finally, our simulations show that it is unlikely to obtain accurate results with fewer than 40 trials when assessing the efficacy of pest control treatments based on prevalence and intensity data.</span>
+<span id="cb4-824"><a href="#cb4-824" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-825"><a href="#cb4-825" aria-hidden="true" tabindex="-1"></a>Although our framework is illustrated to compare the efficacy of plant pest treatments, it could be applied to other areas of research in the future, in particular for optimizing designs used in animal and human epidemiology. It is imperative to note that the ultimate selection of a design should be contingent upon the consideration of local constraints. As the model codes are made fully available, we believe that these codes could be used by different institutes to compare many different designs in the future, not only the types of designs considered in our paper. Of particular significance is the capability of our model to optimize sample sizes, with its impact contingent on the relative importance of within-trial variability compared to between-trial variability.    </span>
 <span id="cb4-826"><a href="#cb4-826" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-827"><a href="#cb4-827" aria-hidden="true" tabindex="-1"></a>AF and DM designed the study. AF performed the computations. AF and DM wrote the paper.</span>
+<span id="cb4-827"><a href="#cb4-827" aria-hidden="true" tabindex="-1"></a><span class="fu"># Author contributions {.appendix}</span></span>
 <span id="cb4-828"><a href="#cb4-828" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-829"><a href="#cb4-829" aria-hidden="true" tabindex="-1"></a><span class="fu"># Funding {.appendix}</span></span>
+<span id="cb4-829"><a href="#cb4-829" aria-hidden="true" tabindex="-1"></a>AF and DM designed the study. AF performed the computations. AF and DM wrote the paper.</span>
 <span id="cb4-830"><a href="#cb4-830" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-831"><a href="#cb4-831" aria-hidden="true" tabindex="-1"></a>This work was partly funded by the project SEPIM (PNRI) and by the RMT SDMAA. </span>
-<span id="cb4-832"><a href="#cb4-832" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb4-833"><a href="#cb4-833" aria-hidden="true" tabindex="-1"></a><span class="fu"># Data availability {.appendix }</span></span>
+<span id="cb4-831"><a href="#cb4-831" aria-hidden="true" tabindex="-1"></a><span class="fu"># Funding {.appendix}</span></span>
+<span id="cb4-832"><a href="#cb4-832" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-833"><a href="#cb4-833" aria-hidden="true" tabindex="-1"></a>This work was partly funded by the project SEPIM (PNRI) and by the RMT SDMAA. </span>
 <span id="cb4-834"><a href="#cb4-834" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb4-835"><a href="#cb4-835" aria-hidden="true" tabindex="-1"></a>Simulated data and model parameters are available without restriction. The original experimental data may be available upon request.</span>
-<span id="cb4-836"><a href="#cb4-836" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-837"><a href="#cb4-837" aria-hidden="true" tabindex="-1"></a><span class="fu"># Acknowledgements {.appendix }</span></span>
+<span id="cb4-835"><a href="#cb4-835" aria-hidden="true" tabindex="-1"></a><span class="fu"># Data availability {.appendix }</span></span>
+<span id="cb4-836"><a href="#cb4-836" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-837"><a href="#cb4-837" aria-hidden="true" tabindex="-1"></a>Simulated data and model parameters are available without restriction. The original experimental data may be available upon request.</span>
 <span id="cb4-838"><a href="#cb4-838" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-839"><a href="#cb4-839" aria-hidden="true" tabindex="-1"></a>We are grateful to Anabelle Laurent, Elma Raaijmakers, Kathleen Antoons and to the institute ITB (https://www.itbfr.org/) for their comments on this project. </span>
+<span id="cb4-839"><a href="#cb4-839" aria-hidden="true" tabindex="-1"></a><span class="fu"># Acknowledgements {.appendix }</span></span>
 <span id="cb4-840"><a href="#cb4-840" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-841"><a href="#cb4-841" aria-hidden="true" tabindex="-1"></a>We are grateful to the INRAE MIGALE bioinformatics facility (MIGALE, INRAE, 2020. Migale bioinformatics Facility, doi: 10.15454/1.5572390655343293E12) for providing help and/or computing and/or storage resources.</span>
+<span id="cb4-841"><a href="#cb4-841" aria-hidden="true" tabindex="-1"></a>We are grateful to Anabelle Laurent, Elma Raaijmakers, Kathleen Antoons and to the institute ITB (https://www.itbfr.org/) for their comments on this project. </span>
 <span id="cb4-842"><a href="#cb4-842" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-843"><a href="#cb4-843" aria-hidden="true" tabindex="-1"></a>The authors are thankful to the institutes that provided us with the data, namely the French Institut Technique de la Betterave, the sugar beet organisation of the Netherlands, and the Institut Royal Belge pour l'Amélioration de la Betterave.</span>
+<span id="cb4-843"><a href="#cb4-843" aria-hidden="true" tabindex="-1"></a>We are grateful to the INRAE MIGALE bioinformatics facility (MIGALE, INRAE, 2020. Migale bioinformatics Facility, doi: 10.15454/1.5572390655343293E12) for providing help and/or computing and/or storage resources.</span>
 <span id="cb4-844"><a href="#cb4-844" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-845"><a href="#cb4-845" aria-hidden="true" tabindex="-1"></a><span class="fu"># Supplementary material {.unnumbered}</span></span>
+<span id="cb4-845"><a href="#cb4-845" aria-hidden="true" tabindex="-1"></a>The authors are thankful to the institutes that provided us with the data, namely the French Institut Technique de la Betterave, the sugar beet organisation of the Netherlands, and the Institut Royal Belge pour l'Amélioration de la Betterave.</span>
 <span id="cb4-846"><a href="#cb4-846" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-847"><a href="#cb4-847" aria-hidden="true" tabindex="-1"></a>{{&lt; include published-202312-favrot-hierarchical-supp.qmd &gt;}}</span>
+<span id="cb4-847"><a href="#cb4-847" aria-hidden="true" tabindex="-1"></a><span class="fu"># Supplementary material {#sec-supplementary-material .unnumbered}</span></span>
 <span id="cb4-848"><a href="#cb4-848" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-849"><a href="#cb4-849" aria-hidden="true" tabindex="-1"></a><span class="fu"># References {.unnumbered} </span></span>
+<span id="cb4-849"><a href="#cb4-849" aria-hidden="true" tabindex="-1"></a>{{&lt; include published-202312-favrot-hierarchical-supp.qmd &gt;}}</span>
 <span id="cb4-850"><a href="#cb4-850" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-851"><a href="#cb4-851" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
-<span id="cb4-852"><a href="#cb4-852" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-851"><a href="#cb4-851" aria-hidden="true" tabindex="-1"></a><span class="fu"># References {.unnumbered} </span></span>
+<span id="cb4-852"><a href="#cb4-852" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-853"><a href="#cb4-853" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
+<span id="cb4-854"><a href="#cb4-854" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
