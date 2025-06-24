@@ -39,8 +39,6 @@ citation:
   doi: "10.57750/6cgk-g727"
   publisher: "French Statistical Society"
   issn: "2824-7795"
-  url: "https://computo.sfds.asso.fr/published-202312-favrot-hierarchical/"
-  pdf-url: "https://computo.sfds.asso.fr/published-202312-favrot-hierarchical/published-202312-favrot-hierarchical.pdf"
 google-scholar: true
 bibliography: references.bib
 github-user: computorg

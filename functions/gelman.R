@@ -48,15 +48,10 @@
     ## We want the maximal eigenvalue of the square matrix X that
     ## solves WX = B. It is numerically easier to work with a
     ## symmetric matrix that has the same eigenvalues as X.
-    if (is.R()) {
-      CW <- chol(W)
-      emax <- eigen(backsolve(CW, t(backsolve(CW, B, transpose=TRUE)),
-                              transpose=TRUE),
-                    symmetric=TRUE, only.values=TRUE)$values[1]
-    }
-    else {
-      emax <- eigen(qr.solve(W,B), symmetric=FALSE, only.values=TRUE)$values
-    }
+    CW <- chol(W)
+    emax <- eigen(backsolve(CW, t(backsolve(CW, B, transpose=TRUE)),
+                            transpose=TRUE),
+                  symmetric=TRUE, only.values=TRUE)$values[1]
     mpsrf <- sqrt( (1 - 1/Niter) + (1 + 1/Nvar) * emax/Niter )
   }
   else
@@ -111,13 +106,6 @@
   ## improve the normal approximation, variables on [0, Inf) are log
   ## transformed, and variables on [0,1] are logit-transformed.
 {
-  if (!is.R())  {
-    # in S-PLUS this function generates a superfluous warning,
-    # so turn off all warnings during the function.
-    oldWarn <- getOption("warn")
-    options(warn=-1)
-    on.exit(options (warn=oldWarn))
-  }
   if (nvar(x) == 1) {
     z <- data.frame(lapply(x, unclass))
     if (min(z) > 0) {
@@ -165,18 +153,11 @@
 
 "gelman.plot" <-
   function (x, bin.width = 10, max.bins = 50, confidence = 0.95,
-            transform = FALSE, autoburnin = TRUE, auto.layout = TRUE, ask,
+            transform = FALSE, autoburnin = TRUE, auto.layout = TRUE, 
+            ask = dev.interactive(),
             col = 1:2, lty = 1:2, xlab = "last iteration in chain",
             ylab = "shrink factor", type = "l", ...) 
   {
-    if (missing(ask)) {
-      ask <- if (is.R()) {
-        dev.interactive()
-      }
-      else {
-        interactive()
-      }
-    }
     x <- as.mcmc.list(x)
     oldpar <- NULL
     on.exit(par(oldpar))
@@ -238,21 +219,3 @@
     }
     return(list(shrink = shrink, last.iter = last.iter))
   }
-
-if (!is.R()){
-  
-  qr.solve <- function (a, b, tol = 1e-07) {
-    if (!is.qr(a))
-      a <- qr(a, tol = tol)
-    nc <- ncol(a$qr)
-    if (a$rank != nc)
-      stop("singular matrix 'a' in solve")
-    if (missing(b)) {
-      if (nc != nrow(a$qr))
-        stop("only square matrices can be inverted")
-      b <- diag(1, nc)
-    }
-    return(qr.coef(a, b))
-  }
-  
-}

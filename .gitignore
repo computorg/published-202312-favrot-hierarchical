@@ -5,3 +5,19 @@
 
 _extensions
 /.quarto/
+DS_Store
+.Rhistory
+/.luarc.json
+/.quarto/
+/*_files
+/*_cache
+/_freeze
+_extensions/
+.Rprofile
+published-202312-favrot-hierarchical.html
+published-202312-favrot-hierarchical.pdf
+_environment
+/.micromamba/
+_site/
+logo_notext_white.png
+/renv/
