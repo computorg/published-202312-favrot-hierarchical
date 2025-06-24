@@ -5,18 +5,10 @@ source(file = "functions/gelman.R")
 
 gelman.plot2 <- function (x, coef, bin.width = 10, max.bins = 50, confidence = 0.95, 
                           transform = FALSE, autoburnin = TRUE, auto.layout = TRUE, 
-                          ask, col = 1:2, lty = 1:2, xlab = "last iteration in chain", 
+                          ask = dev.interactive(), col = 1:2, lty = 1:2, xlab = "last iteration in chain", 
                           ylab = "shrink factor", type = "l", ncol = 4, ...){
   exclude = which((summary(x)$statistics %>% rownames) %in% c("gamma0[1]", "gamma1[1]"))
   x = x[, - exclude]
-  if (missing(ask)) {
-    ask <- if (is.R()) {
-      dev.interactive()
-    }
-    else {
-      interactive()
-    }
-  }
   x <- as.mcmc.list(x)
   oldpar <- NULL
   on.exit(par(oldpar))
