@@ -1,23 +1,49 @@
-.Rproj.user
+# R and co
 .Rhistory
+.Rprofile
+.Rapp.history
 .RData
 .Ruserdata
-.Rprofile
-/renv/
+*.Rproj
+.Rproj.user
+.Rproj.user/
+/*.Rcheck/
+renv/
 
-DS_Store
+# Python and co
+_environment
+/.micromamba/
+/.joblib
+/.pytest_cache/
+scripts/__pycache__/
 
-_extensions
+# Quarto tmp files
 /.quarto/
-/.luarc.json
 /*_files
 /*_cache
 /_freeze
-published-202312-favrot-hierarchical.html
-published-202312-favrot-hierarchical.pdf
-
-_environment
-/.micromamba/
-
 _site/
+/cache/
+
+# Quarto extension files
+_extensions/
+logo_text_white.pdf
 logo_notext_white.png
+
+# Quarto output files
+main.pdf
+main.html
+main.ipynb
+main.tex
+
+# Latex compilation files
+*.aux
+*.log
+*.toc
+
+# Various system files
+DS_Store
+/.luarc.json
+
+
+**/*.quarto_ipynb
