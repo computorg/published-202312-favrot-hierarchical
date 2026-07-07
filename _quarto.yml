@@ -23,7 +23,7 @@ author:
     affiliations:
       - name: MIA Paris-Saclay, INRAE AgroParisTech Université Paris-Saclay, France
         url: https://mia-ps.inrae.fr/
-date: 01/09/2024
+date: 2024-01-09
 abstract: >+
   In plant epidemiology, pest abundance is measured in field trials using metrics assessing either pest prevalence (fraction of the plant population infected) or pest intensity (average number of pest individuals present in infected plants). Some of these trials rely on prevalence, while others rely on intensity, depending on the protocols.
 
@@ -43,5 +43,6 @@ citation:
   publisher: "French Statistical Society"
   issn: "2824-7795"
   url: "https://computo-journal.org/published-202312-favrot-hierarchical/"
+  issued: "2024-01-09"
 github-user: computorg
 repo: "published-202312-favrot-hierarchical"
