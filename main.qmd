@@ -33,12 +33,6 @@ abstract: >+
   Because of its flexibility, our model can be used to evaluate and rank the efficacy of pest treatments using either prevalence or intensity data, or both types of data simultaneously. As it can be easily implemented using standard Bayesian packages, we hope that it will be useful to agronomists, plant pathologists, and applied statisticians to analyze pest surveys and field experiments conducted to assess the efficacy of pest treatments.
 
 keywords: [bayesian model, epidemiology, hierarchical model, pest control, trial, survey]
-citation:
-  type: article-journal
-  container-title: "Computo"
-  doi: "10.57750/6cgk-g727"
-  publisher: "French Statistical Society"
-  issn: "2824-7795"
 google-scholar: true
 bibliography: references.bib
 github-user: computorg
