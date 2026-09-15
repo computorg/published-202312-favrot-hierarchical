@@ -48,3 +48,12 @@ github-user: computorg
 repo: "published-202312-favrot-hierarchical"
 
 google-scholar: true
+date-modified: last-modified
+description: |
+keywords: [bayesian model, epidemiology, hierarchical model, pest control, trial, survey]
+bibliography: references.bib
+format:
+  computo-html: default
+  computo-pdf: default
+execute:
+  freeze: auto  # re-render only when source changes
