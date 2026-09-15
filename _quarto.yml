@@ -1,6 +1,5 @@
 project:
-  type: website
-  title: "published-202312-favrot-hierarchical"
+  type: default
   render: 
     - main.qmd
     - README.qmd
